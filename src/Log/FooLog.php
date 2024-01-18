@@ -35,8 +35,10 @@ class FooLog {
     public static function writeLog($title, $message, $lang = 'en') {
     $logEntry = self::logTitle($title, $lang) . " - " . self::logMessage($message, $lang) . "\n";
     //Met ton path de C:/../var/log/"logfile.log"
-    $logFilePath = 'C:\Users\karim\Desktop\COMPOSER_MAKER\PROJET-COMPOSER-MAKER\my_validator_project\var\log\logfile.log';
+    //$logFilePath = 'C:\Users\karim\Desktop\COMPOSER_MAKER\PROJET-COMPOSER-MAKER\my_validator_project\var\log\logfile.log';
+    $logFilePath = 'C:\Users\karim\Desktop\COMPOSER_MAKER\my_validator_project\var\log\logfile.log';
+
     file_put_contents($logFilePath, $logEntry, FILE_APPEND);
 }
-    
+
 }
